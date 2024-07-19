@@ -217,12 +217,12 @@ function validateForm() {
         return false;
     }
 
-    // WhatsApp message URL with site name and link
+    // WhatsApp message URL with site name and link in one line
     var phoneNumber = "+918714738338"; // Replace with your WhatsApp phone number
-    var siteName = "Afsal Portfolio"; // Your site name
-    var siteLink = "https://afsalportfolio.vercel.app"; // Your site link
-    var message = `Hello!%0A%0AYou have a new message from your portfolio site.*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${comments}%0A%0A*Site:* ${siteName}%0A*Link:* ${siteLink}`;
-    var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+    var siteName = "Afsal Portfolio";
+    var siteLink = "https://afsalportfolio.vercel.app";
+    var message = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${comments}\n\nYou have now been contacted from my website, ${siteName} (${siteLink}). Thank you for your inquiry. I will be in touch with you soon.🥰`;
+    var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     // Redirect to WhatsApp chat
     window.location.href = whatsappURL;
