@@ -1484,7 +1484,7 @@ video {
 }
 
 .shadow-slate-200 {
-    --tw-shadow-color: #e2e8f0 !important;
+    /* --tw-shadow-color: #e2e8f0 !important; */
     --tw-shadow: var(--tw-shadow-colored) !important
 }
 
